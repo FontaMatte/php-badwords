@@ -20,12 +20,19 @@ $paragrafoModificato = str_replace($parolaDaCensurare, '***', $paragrafo);
         <title>PHP Badwords</title>
     </head>
     <body>
+        <h1>
+            PHP BADWORDS
+        </h1>
         <!-- STAMPO IL PARAGRAFO ORIGINALE E LA SUA LUNGHEZZA -->
         <p>
-            Paragrafo originale: <?php  echo $paragrafo ?> 
-        <br>
-            Lunghezza del paragrafo: <?php  echo strlen($paragrafo) ?>
+            PARAGRAFO ORIGINALE: <?php  echo $paragrafo ?> 
         </p>
+        <div>
+            LUNGHEZZA DEL PARAGRAFO: <?php  echo strlen($paragrafo) ?> caratteri
+        </div>
+
+        <br>
+
         <!-- FORM PER RICHIEDRE ALL'UTENTE LA PAROLA DA CENSURARE -->
         <form action="" method="GET">
             <input type="text" name="badword" placeholder="inserisci una parola da censurare">
@@ -34,15 +41,12 @@ $paragrafoModificato = str_replace($parolaDaCensurare, '***', $paragrafo);
             </button>
         </form>
 
-        <!-- STAMPO IN PAGINA IL PARAGRAFO CENSURATO E LA SUA LUNGHEZZA -->
-        <!-- <p>
-            Hai inserito la parola: <?php echo $parolaDaCensurare; ?>
-        </p> -->
         <p>
-            Paragrafo modificato: <?php echo $paragrafoModificato; ?>
-            <br>
-            Lunghezza del paragrafo: <?php  echo strlen($paragrafoModificato) ?>
+            PARAGRAFO CENSURATO: <?php echo $paragrafoModificato; ?>
         </p>
+        <div>
+            LUNGHEZZA DEL PARAGRAFO CENSURATO: <?php  echo strlen($paragrafoModificato) ?> caratteri
+        </div>
              
     </body>
 </html>
